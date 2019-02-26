@@ -1,26 +1,17 @@
-const mongoose = require('mongoose')
-const express = require('express');
-const bodyParser = require('body-parser');
-const app = express();
-
-app.use(bodyParser.urlencoded({ extended: false }))
-app.use(bodyParser.json())
-app.use(express.static('src'));
+const mongoose = require('mongoose');
+const app = require('./app')
+const config = require('./config')
 
 
-app.get('/',(req,res)=>{
-	res.sendFile(__dirname + '/src/Home/index.html')
-})
 
+mongoose.connect(config.db,(err,res)=>{
+    if(err){
+        return console.log(err);
+    }
+    console.log('Conectado a mongodb correctamente')
 
-mongoose.connect('mongodb://localhost:27017/weaflix',(err)=>{
-	if(err){
-		return console.log("error");
-	}
+    app.listen(config.port, ()=>{
+        console.log(`Escuchando en el puerto ${config.port}...`)
+    })
 
-	console.log('Conectado a mongodb correctamente')
-
-	app.listen(3000,()=>{
-		console.log('Conectado al puerto 3000 correctamente')
-	})
 })
