@@ -13,6 +13,21 @@ body{
     background-attachment: fixed;
 }
 
+
+.topTitle{
+	margin-top: 15vh;
+	color: #fff;
+	text-align: center;
+	font-size: 30px;
+	font-weight: 300;
+	font-style: italic;
+}
+
+.firstSection{
+	width: 100%;
+	height: 100vh;
+}
+
 .contenedor{
     widows: 90%;
     margin: auto;
@@ -30,7 +45,7 @@ body{
 
 header{
     width: 100%;
-    padding: 50px 0;
+    padding: 20px 0;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -49,9 +64,10 @@ header .menu a:hover{
 }
 
 .main{
-    background: white;
+	background-color: #F5F5F5;
     padding: 20px;
     width: 100%;
+	margin-top: 100px;
 }
 
 .main article .thumb{
@@ -68,6 +84,7 @@ header .menu a:hover{
     margin-bottom: 20px;
     font-weight: 300;
     font-size: 32px;
+	margin-left: 10px;
 }
 
 .main article p{
@@ -141,6 +158,15 @@ footer .social a:hover{
         margin-bottom: 20px;
     }
 
+	.topTitle{
+		margin-top: 5vh;
+		font-size: 20px !important;
+		font-weight: 300;
+	}
+
+	.main{
+		margin-top: 50px;
+	}
 
 
 	.main article .thumb img{
@@ -165,6 +191,7 @@ footer .social a:hover{
 	margin: 10px;
 	max-width: 100%;
 	min-width: 30%;
+	background: white;
 }
 
 .box:hover{
@@ -225,10 +252,10 @@ footer {
 	display: flex;
 	flex-flow: column nowrap;
 	justify-content: space-between;
-  background: #373737;
-  margin-top: auto;
-  width: 100%;
-  padding-bottom: 0;
+	  background: #373737;
+	  margin-top: auto;
+	  width: 100%;
+	  padding-bottom: 0;
 }
 
 .footer-social-section {
