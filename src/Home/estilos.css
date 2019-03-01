@@ -8,9 +8,10 @@
 
 body{
 	font-family: 'Montserrat', sans-serif;
-    background: #000 url('./../img/6.jpg');
+	background: linear-gradient( rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5) ), url('./../img/6.jpg');
     background-size: contain;
     background-attachment: fixed;
+	background-color: rgba(0,0,0.1);
 }
 
 
