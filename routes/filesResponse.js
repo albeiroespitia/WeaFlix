@@ -6,6 +6,7 @@ const html = express.Router()
 
 
 html.get('/',(req,res)=>{
+	console.log("xddddd")
 	res.sendFile(path.resolve(__dirname +'/../src/Home/index.html'))
 })
 
