@@ -20,7 +20,25 @@ async function getPosts(){
 	document.getElementById("titleArticle").innerHTML = titleTemplate;
 	document.getElementById("bodyArticle").innerHTML = articleTemplate;
 
-	document.title = 'WeaFlix - ' + successPosts.post.title;
+	document.title =  successPosts.post.title + ' - WeaFlix';
+
+
+	var link=document.createElement('meta');
+	link.name="og:url";
+	link.content="WEAFLIX.TK";
+	document.getElementsByTagName('head')[0].appendChild(link);
+
+	var link2=document.createElement('meta');
+	link2.name="og:type";
+	link2.content="article";
+	document.getElementsByTagName('head')[0].appendChild(link2);
+
+
+	var link3=document.createElement('meta');
+	link3.name="og:title";
+	link3.content=document.title;
+	document.getElementsByTagName('head')[0].appendChild(link3);
+
 
 
 
