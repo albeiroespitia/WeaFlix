@@ -6,11 +6,12 @@
   "dependencies": {
     "body-parser": "^1.18.3",
     "express": "^4.16.4",
+    "express-metatag": "^0.1.0",
     "mongoose": "^5.4.15"
   },
   "devDependencies": {},
   "scripts": {
-	"start": "node index.js",
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
