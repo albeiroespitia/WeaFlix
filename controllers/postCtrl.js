@@ -9,6 +9,17 @@ function getPosts(req,res){
 	})
 }
 
+function getPost(req,res){
+	Post.findById(req.params.postId,(err,post)=>{
+		if (err) return res.status(500).send({message:`Error realizar la peticion ${err}`})
+		if (!post) return res.status(404).send({message: `Error posts no existen`});
+
+		res.status(200).send({post})
+	})
+}
+
+
+
 
 function addPost(req,res){
 	console.log(req.body);
@@ -16,6 +27,7 @@ function addPost(req,res){
 		title: req.body.title,
 		article: req.body.article,
 		principalImage: req.body.principalImage,
+		miniatura: req.body.miniatura,
 		category: req.body.category,
 		tag: req.body.tag
 	})
@@ -30,5 +42,6 @@ function addPost(req,res){
 
 module.exports = {
 	addPost,
-	getPosts
+	getPosts,
+	getPost
 }

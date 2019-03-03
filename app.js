@@ -13,7 +13,7 @@ app.use(express.static(__dirname + '/src'));
 
 app.use('/api',api)
 
-app.use(htmlResponse);
+app.use('/',htmlResponse);
 
 
 module.exports = app

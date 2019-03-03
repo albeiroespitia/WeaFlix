@@ -188,11 +188,15 @@ footer .social a:hover{
 .box{
 	flex-grow: 1;
 	flex-basis: 30%;
-	height: auto;
 	margin: 10px;
-	max-width: 100%;
+	max-width: 30%;
 	min-width: 30%;
 	background: white;
+}
+
+.box a{
+	text-decoration: none;
+	color: #000;
 }
 
 .box:hover{
@@ -219,6 +223,13 @@ footer .social a:hover{
 
 .containerCard p{
 	font-weight: 300;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 5; /* number of lines to show */
+	line-height: 1;        /* fallback */
+	max-height: 1*5;       /* fallback */
 }
 
 ul {

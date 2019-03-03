@@ -5,6 +5,7 @@ const PostSchema = Schema({
     title: String,
     article: String,
 	principalImage: String,
+	miniatura: String,
     category: { type: String, enum : ['movies','series']},
     tag: String
 })

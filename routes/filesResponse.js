@@ -10,5 +10,9 @@ html.get('/',(req,res)=>{
 	res.sendFile(path.resolve(__dirname +'/../src/Home/index.html'))
 })
 
+html.get('/post/:postId?',(req,res)=>{
+	res.sendFile(path.resolve(__dirname +'/../src/Article/index.html'))
+})
+
 
 module.exports = html;
