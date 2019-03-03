@@ -123,6 +123,10 @@ footer .social a:hover{
         padding-bottom: 20px;
     }
 
+	.main article{
+		padding: 20px 0px;
+	}
+
     header .menu{
         width: 100%;
         background: rgba(255,255,255,.2);
@@ -152,11 +156,6 @@ footer .social a:hover{
         margin-bottom: 20px;
     }
 
-
-
-	.main article .thumb img{
-		height: 300px;
-	}
 }
 
 

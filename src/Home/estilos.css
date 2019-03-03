@@ -136,6 +136,10 @@ footer .social a:hover{
         padding-bottom: 20px;
     }
 
+	.box{
+		max-width: 100% !important;
+	}
+
     header .menu{
         width: 100%;
         background: rgba(255,255,255,.2);

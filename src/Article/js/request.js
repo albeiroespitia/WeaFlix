@@ -20,6 +20,8 @@ async function getPosts(){
 	document.getElementById("titleArticle").innerHTML = titleTemplate;
 	document.getElementById("bodyArticle").innerHTML = articleTemplate;
 
+	document.title = 'WeaFlix - ' + successPosts.post.title;
+
 
 
 
