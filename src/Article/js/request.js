@@ -23,7 +23,7 @@ async function getPosts(){
 	document.title =  successPosts.post.title + ' - WeaFlix';
 
 
-	var link=document.createElement('meta');
+/*	var link=document.createElement('meta');
 	link.name="og:url";
 	link.content="WEAFLIX.TK";
 	document.getElementsByTagName('head')[0].appendChild(link);
@@ -31,7 +31,7 @@ async function getPosts(){
 	var link2=document.createElement('meta');
 	link2.name="og:type";
 	link2.content="article";
-	document.getElementsByTagName('head')[0].appendChild(link2);
+	document.getElementsByTagName('head')[0].appendChild(link2);*/
 
 
 	var link3=document.createElement('meta');
