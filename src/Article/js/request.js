@@ -21,28 +21,8 @@ async function getPosts(){
 
 	document.title =  successPosts.post.title + ' - WeaFlix';
 
-	shareOverrideOGMeta(window.location.href,document.title,successPosts.post.article,successPosts.post.principalImage);
 
 
 }
 
 getPosts();
-
-function shareOverrideOGMeta(overrideLink, overrideTitle, overrideDescription, overrideImage)
-{
-	FB.ui({
-		method: 'share_open_graph',
-		action_type: 'og.likes',
-		action_properties: JSON.stringify({
-			object: {
-				'og:url': overrideLink,
-				'og:title': overrideTitle,
-				'og:description': overrideDescription,
-				'og:image': overrideImage
-			}
-		})
-	},
-	function (response) {
-	// Action after response
-	});
-}

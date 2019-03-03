@@ -18,6 +18,21 @@ function getPost(req,res){
 	})
 }
 
+function getPostInEjs(req,res){
+	Post.findById(req.params.postId,(err,post)=>{
+		if (err) return res.status(500).send({message:`Error realizar la peticion ${err}`})
+		if (!post) return res.status(404).send({message: `Error posts no existen`});
+
+		res.render(__dirname + '/../src/Article/index.ejs',{
+			titleOG:post.title,
+			descriptionOG: post.article,
+			imageOG: post.miniatura,
+			urlOG: `http://www.weaflix.tk/post/${req.params.postId}`
+		});
+		//res.status(200).send({post})
+	})
+}
+
 
 
 
@@ -43,5 +58,6 @@ function addPost(req,res){
 module.exports = {
 	addPost,
 	getPosts,
-	getPost
+	getPost,
+	getPostInEjs
 }

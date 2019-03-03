@@ -2,6 +2,7 @@
 
 const path = require('path');
 const express = require('express')
+const postCtrl = require('../controllers/postCtrl');
 const html = express.Router()
 
 
@@ -10,9 +11,7 @@ html.get('/',(req,res)=>{
 	res.sendFile(path.resolve(__dirname +'/../src/Home/index.html'))
 })
 
-html.get('/post/:postId?',(req,res)=>{
-	res.sendFile(path.resolve(__dirname +'/../src/Article/index.html'))
-})
+html.get('/post/:postId?',postCtrl.getPostInEjs)
 
 
 module.exports = html;
