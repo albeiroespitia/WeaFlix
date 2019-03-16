@@ -14,7 +14,7 @@ async function getPosts(){
 						<img src="${item.miniatura}" alt="Avatar" style="width:100%">
 						<div class="containerCard">
 						  <h4>${item.title}</h4>
-						  <p>${item.article}</p>
+						  <div class="containerDescription"><p>${item.article}</p></div>
 						</div>
 					</a>
 					</div>`
